@@ -19,15 +19,15 @@
 //     });
 //   });
 // }
-DOMSelectors.songButton.insertAdjacentElement(
-  "beforebegin",
-  "<h1>We are an H1</h1>"
-);
+// DOMSelectors.songButton.insertAdjacentElement(
+//   "beforebegin",
+//   "<h1>We are an H1</h1>"
+// );
 
-DOMSelectors.imgButton.addEventListener("click", function () {
-  let input = DOMSelectors.input.value;
-  DOMSelectors.box.insertAdjacentElement("afterend");
-});
+// DOMSelectors.imgButton.addEventListener("click", function () {
+//   let input = DOMSelectors.input.value;
+//   DOMSelectors.box.insertAdjacentElement("afterend");
+// });
 
 const DOMSelectors = {
   songButton: document.getElementById("songButton"),
@@ -37,3 +37,9 @@ const DOMSelectors = {
   imgButton: document.getElementById("imgButton"),
   setImg: document.getElementById("setImg"),
 };
+
+DOMSelectors.imgButton.addEventListener("click", function () {
+  backgroundAndText(DOMSelectors.background, DOMSelectors.text);
+});
+
+function addNewDiv()
