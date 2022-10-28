@@ -29,17 +29,41 @@
 //   DOMSelectors.box.insertAdjacentElement("afterend");
 // });
 
+// DOMSelectors.imgButton.addEventListener("click", function () {
+//   backgroundAndText(DOMSelectors.background, DOMSelectors.text);
+// });
+
 const DOMSelectors = {
-  songButton: document.getElementById("songButton"),
   songName: document.getElementById("songName"),
-  artistButton: document.getElementById("artistButton"),
   artistName: document.getElementById("artistName"),
-  imgButton: document.getElementById("imgButton"),
   setImg: document.getElementById("setImg"),
+  set: document.getElementById("set"),
+  container: document.getElementById("container"),
 };
 
-DOMSelectors.imgButton.addEventListener("click", function () {
-  backgroundAndText(DOMSelectors.background, DOMSelectors.text);
+function addNewDiv() {}
+
+DOMSelectors.set.addEventListener("click", function () {
+  let song = DOMSelectors.songName.value;
+  let artist = DOMSelectors.artistName.value;
+  let img = DOMSelectors.setImg.value;
+
+  DOMSelectors.container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="fake">
+        <image src></image>
+        <h1>${song}</h1>
+        <h2>${artist}</h2>
+        <img src="${img}" alt="">
+    </div>`
+  );
 });
 
-function addNewDiv()
+// DOMSelectors.imgButton.addEventListener("click", function () {
+//   let input = DOMSelectors.input.value;
+//   DOMSelectors.box.insertAdjacentElement("afterend");
+// });
+
+// DOMSelectors.imgButton.addEventListener("click", function () {
+//   backgroundAndText(DOMSelectors.background, DOMSelectors.text);
+// });

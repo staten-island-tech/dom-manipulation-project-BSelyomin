@@ -1,0 +1,9 @@
+*, body, head, {
+    padding:0px;
+    font-size: 10px;
+}
+
+.fake {
+    background-color: aqua;
+    border-radius: 10px;
+}
