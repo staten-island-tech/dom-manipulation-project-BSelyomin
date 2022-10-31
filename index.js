@@ -19,7 +19,7 @@
 //     });
 //   });
 // }
-// DOMSelectors.songButton.insertAdjacentElement(
+// DOMSelectors.songButton.insertAdjacentHTML(
 //   "beforebegin",
 //   "<h1>We are an H1</h1>"
 // );
@@ -39,6 +39,8 @@ const DOMSelectors = {
   setImg: document.getElementById("setImg"),
   set: document.getElementById("set"),
   container: document.getElementById("container"),
+  temp: document.querySelector(".fake"),
+  getRid: document.getElementById("remove"),
 };
 
 function addNewDiv() {}
@@ -55,6 +57,21 @@ DOMSelectors.set.addEventListener("click", function () {
         <h1>${song}</h1>
         <h2>${artist}</h2>
         <img src="${img}" alt="">
+        <button id="remove">Delete</button>
+    </div>`
+  );
+});
+
+DOMSelectors.getRid.addEventListener("click", function () {
+  DOMSelectors.songName.remove();
+  DOMSelectors.container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="fake">
+        <image src></image>
+        <h1>${song}</h1>
+        <h2>${artist}</h2>
+        <img src="${img}" alt="">
+        <button id="remove">Delete</button>
     </div>`
   );
 });
