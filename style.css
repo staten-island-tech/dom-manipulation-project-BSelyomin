@@ -7,3 +7,25 @@
     background-color: aqua;
     border-radius: 10px;
 }
+
+.parent {
+    margin: auto;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.input  {
+    display: inline;
+    margin: auto; 
+}
+.text {
+    display: inline;
+    margin: auto; 
+}
+
+
+
+#set {
+    display: block;
+    margin: auto;
+}

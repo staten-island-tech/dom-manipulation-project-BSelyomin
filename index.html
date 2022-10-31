@@ -8,15 +8,26 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-    <input type="text" id="songName">
-    <input type="text" id="artistName">
-    <input type="text" id="setImg">    
-    <button id="set">Set</button>
-    <div id="container">
+    <div class="all">
+
+        <div class="name parent">
+            <p class="nameText text">Enter Song Name:</p>
+            <input type="text" class="input songInput" id="songName">
         </div>
+        <div class="artist parent">
+            <p class="artistText text">Enter Artist Name:</p>
+            <input type="text" class="input artistInput" id="artistName">
+        </div>
+        <div class="link parent">
+            <p class="linkText text">Enter Image Link:</p>
+            <input type="text" class="input linkInput" id="setImg">    
+        </div>
+        <button id="set">Set</button>
     </div>
-    <script src="index.js"></script>
+        <div id="container">
+        <br>
+        </div>
     
-    </div>
+    <script src="index.js"></script>
 </body>
 </html>

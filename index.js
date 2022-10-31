@@ -57,21 +57,8 @@ DOMSelectors.set.addEventListener("click", function () {
         <h1>${song}</h1>
         <h2>${artist}</h2>
         <img src="${img}" alt="">
-        <button id="remove">Delete</button>
-    </div>`
-  );
-});
-
-DOMSelectors.getRid.addEventListener("click", function () {
-  DOMSelectors.songName.remove();
-  DOMSelectors.container.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="fake">
-        <image src></image>
-        <h1>${song}</h1>
-        <h2>${artist}</h2>
-        <img src="${img}" alt="">
-        <button id="remove">Delete</button>
+        <br>
+        <button id="remove" onclick="this.parentElement.remove()">Delete</button>
     </div>`
   );
 });
