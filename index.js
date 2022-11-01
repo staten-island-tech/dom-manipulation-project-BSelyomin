@@ -54,9 +54,9 @@ DOMSelectors.set.addEventListener("click", function () {
     "afterbegin",
     `<div class="fake">
         <image src></image>
-        <h1>${song}</h1>
-        <h2>${artist}</h2>
-        <img src="${img}" alt="">
+        <h1 class="son">${song}</h1>
+        <h2 class="art">${artist}</h2>
+        <img src="${img}" class="myImage"alt="">
         <br>
         <button id="remove" onclick="this.parentElement.remove()">Delete</button>
     </div>`
