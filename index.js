@@ -37,15 +37,15 @@ const DOMSelectors = {
   songName: document.getElementById("songName"),
   artistName: document.getElementById("artistName"),
   setImg: document.getElementById("setImg"),
-  set: document.getElementById("set"),
+  set: document.getElementById("submit"),
   container: document.getElementById("container"),
   temp: document.querySelector(".fake"),
   getRid: document.getElementById("remove"),
+  form: document.getElementById("form"),
 };
 
-function addNewDiv() {}
-
-DOMSelectors.set.addEventListener("click", function () {
+DOMSelectors.form.addEventListener("submit", function (e) {
+  e.preventDefault();
   let song = DOMSelectors.songName.value;
   let artist = DOMSelectors.artistName.value;
   let img = DOMSelectors.setImg.value;
