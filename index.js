@@ -33,7 +33,7 @@
 //   backgroundAndText(DOMSelectors.background, DOMSelectors.text);
 // });
 
-const DOMSelectors = {
+let DOMSelectors = {
   songName: document.getElementById("songName"),
   artistName: document.getElementById("artistName"),
   setImg: document.getElementById("setImg"),
@@ -42,6 +42,7 @@ const DOMSelectors = {
   temp: document.querySelector(".fake"),
   getRid: document.getElementById("remove"),
   form: document.getElementById("form"),
+  remove: document.querySelectorAll("#remove"),
 };
 
 DOMSelectors.form.addEventListener("submit", function (e) {
@@ -58,10 +59,24 @@ DOMSelectors.form.addEventListener("submit", function (e) {
         <h2 class="art">${artist}</h2>
         <img src="${img}" class="myImage"alt="">
         <br>
-        <button id="remove" onclick="this.parentElement.remove()">Delete</button>
+        <button id="remove" >Delete</button>
     </div>`
   );
+
+  DOMSelectors.remove = document.querySelectorAll("#remove");
+  DOMSelectors.remove.forEach((button) =>
+    button.addEventListener("click", function () {
+      this.parentElement.remove();
+    })
+  );
+  clear();
 });
+
+function clear() {
+  DOMSelectors.songName.value = "";
+  DOMSelectors.artistName.value = "";
+  DOMSelectors.setImg.value = "";
+}
 
 // DOMSelectors.imgButton.addEventListener("click", function () {
 //   let input = DOMSelectors.input.value;
