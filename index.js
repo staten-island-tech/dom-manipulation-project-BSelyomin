@@ -51,26 +51,34 @@ DOMSelectors.form.addEventListener("submit", function (e) {
   let artist = DOMSelectors.artistName.value;
   let img = DOMSelectors.setImg.value;
 
-  DOMSelectors.container.insertAdjacentHTML(
+  create(DOMSelectors.container, song, artist, img);
+
+  query();
+  clear();
+});
+
+function create(container, song, artist, img) {
+  container.insertAdjacentHTML(
     "afterbegin",
     `<div class="fake">
-        <image src></image>
-        <h1 class="son">${song}</h1>
-        <h2 class="art">${artist}</h2>
-        <img src="${img}" class="myImage"alt="">
-        <br>
-        <button id="remove" >Delete</button>
+      <image src></image>
+      <h1 class="son">${song}</h1>
+      <h2 class="art">${artist}</h2>
+      <img src="${img}" class="myImage"alt="">
+      <br>
+      <button id="remove" >Delete</button>
     </div>`
   );
+}
 
+function query() {
   DOMSelectors.remove = document.querySelectorAll("#remove");
   DOMSelectors.remove.forEach((button) =>
     button.addEventListener("click", function () {
       this.parentElement.remove();
     })
   );
-  clear();
-});
+}
 
 function clear() {
   DOMSelectors.songName.value = "";
